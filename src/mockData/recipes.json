@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Bolognese",
+    "image": "image-url-1",
+    "ingredients": ["spaghetti", "tomato", "beef", "garlic", "onion"]
+  },
+  {
+    "id": 2,
+    "title": "Vegetable Stir Fry",
+    "image": "image-url-2",
+    "ingredients": ["broccoli", "carrot", "bell pepper", "soy sauce", "garlic"]
+  }
+]
