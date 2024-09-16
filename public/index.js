@@ -4,18 +4,14 @@ import App from "./App";
 import { IngredientsProvider } from "./context/IngredientsContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./index.css";
-
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 const queryClient = new QueryClient();
-
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
-root.render(
-  <React.StrictMode>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<React.StrictMode>
     <IngredientsProvider>
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>
     </IngredientsProvider>
-  </React.StrictMode>
-);
+  </React.StrictMode>);
+serviceWorkerRegistration.register();
