@@ -4,6 +4,7 @@ import App from "./App";
 import { IngredientsProvider } from "./context/IngredientsContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./index.css";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 const queryClient = new QueryClient();
 
@@ -19,3 +20,5 @@ root.render(
     </IngredientsProvider>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();

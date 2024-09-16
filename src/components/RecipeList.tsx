@@ -20,6 +20,12 @@ const RecipeList: React.FC = () => {
       {recipes?.map((recipe: Recipe) => (
         <div key={recipe.id} className="border p-4">
           <h2 className="text-xl font-bold">{recipe.title}</h2>
+          <p>{recipe.description}</p>
+          <ul>
+            {recipe.ingredients.map((ingredient) => (
+              <li key={ingredient}>{ingredient}</li>
+            ))}
+          </ul>
           <img
             src={recipe.image}
             alt={recipe.title}
